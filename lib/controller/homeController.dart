@@ -9,4 +9,7 @@ class ToDoController extends GetxController {
   addToDo(ToDoModel toDoModel) {
     toDos.add(toDoModel);
   }
+  removeItem(int index) {
+    toDos.removeAt(index);
+  }
 }

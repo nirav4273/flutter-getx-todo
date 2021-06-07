@@ -38,6 +38,12 @@ class ToDoPage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return ListTile(
                     title: Text(toDos[index].title),
+                    trailing: IconButton(
+                      icon: Icon(Icons.remove_circle),
+                      onPressed: () {
+                        toDoController.removeItem(index);
+                      },
+                    ),
                   );
                 },
                 itemCount: toDoController.toDos.length,
